@@ -1,0 +1,155 @@
+<!doctype html>
+<!--
+  Polityka prywatności gry Alchemist: Potion Sort Puzzle — strona na GitHub Pages (Z12).
+  Adres docelowy: https://danielradkowski.github.io/alchemist/privacy.html
+  (do 15.10.2026: /alchemy-sort/privacy.html — tam zostaje przekierowanie, docs/legal/stary-adres-privacy.html)
+  (stała `SettingsScreen.PrivacyPolicyUrl` w grze i pole w Google Play Console).
+  Źródło tekstu: docs/legal/polityka-prywatnosci.md — zmiana tam = ta sama zmiana tutaj.
+  Gra otwiera stronę z kotwicą #pl albo #en; bez kotwicy widać wersję angielską.
+  Opublikowane 11.10.2026: kopia w repozytorium danielradkowski.github.io (od 15.10.2026: alchemist/privacy.html).
+  Aktualizacja 15.10.2026: identyfikator com.bobbydevstudio.alchemist, uzupełnienia z audytu
+  docs/meta/ZGODNOSC-GOOGLE-PLAY.md (pkt 3 i 8).
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Alchemist: Potion Sort Puzzle</title>
+<style>
+  :root {
+    --bg: #F7F5F0; --ink: #1C2230; --muted: #5A6476; --line: #D9D4C7; --accent: #1F7F8C;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0D1119; --ink: #E6ECF5; --muted: #8795AA; --line: #2A3A4F; --accent: #5CC9D6; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+  nav { display: flex; gap: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  a { color: var(--accent); }
+  h1 { font-size: 1.6rem; line-height: 1.25; margin: 24px 0 8px; }
+  h2 { font-size: 1.15rem; margin: 28px 0 8px; }
+  ul { padding-left: 1.2em; }
+  .meta { color: var(--muted); }
+  .meta li { list-style: none; margin-left: -1.2em; }
+  /* Język: domyślnie angielski; #pl w adresie pokazuje polski i chowa angielski. */
+  #pl { display: none; }
+  #pl:target { display: block; }
+  #pl:target ~ #en { display: none; }
+</style>
+</head>
+<body>
+<main>
+<nav><a href="#pl" hreflang="pl">Polski</a><a href="#en" hreflang="en">English</a></nav>
+
+<section id="pl" lang="pl">
+<h1>Polityka prywatności gry Alchemist: Potion Sort Puzzle</h1>
+<p class="meta">Obowiązuje od: 15 października 2026</p>
+<ul class="meta">
+  <li>Aplikacja: Alchemist: Potion Sort Puzzle, Android, identyfikator <code>com.bobbydevstudio.alchemist</code></li>
+  <li>Wydawca i administrator danych: Daniel Radkowski (Bobby Dev Studio)</li>
+  <li>Kontakt: <a href="mailto:bobbydevstudio@gmail.com">bobbydevstudio@gmail.com</a></li>
+</ul>
+
+<h2>1. W skrócie</h2>
+<ul>
+  <li>Gra nie wymaga konta i nie prosi o imię, adres e-mail, numer telefonu, kontakty, zdjęcia ani lokalizację GPS.</li>
+  <li>Postęp gry zapisuje się wyłącznie na Twoim urządzeniu. Nie wysyłamy go na żaden serwer.</li>
+  <li>Gra wyświetla reklamy Google AdMob. Dane potrzebne do reklam zbiera biblioteka Google (Google Mobile Ads SDK) — szczegóły w punkcie 3.</li>
+  <li>W Europejskim Obszarze Gospodarczym, Wielkiej Brytanii i Szwajcarii reklamy spersonalizowane pojawiają się tylko za Twoją zgodą, którą możesz w każdej chwili zmienić w grze.</li>
+</ul>
+
+<h2>2. Dane zapisywane na urządzeniu</h2>
+<p>Gra zapisuje w pamięci telefonu: postęp (poziomy, gwiazdki, monety, składniki, receptury i eliksiry), ustawienia (dźwięk, wibracje, animacje, język, wygląd) oraz liczniki potrzebne do zasad wyświetlania reklam (np. liczbę poziomów od ostatniej reklamy i jej czas). Te dane nie opuszczają urządzenia i nie mamy do nich dostępu. Postęp usuniesz w Ustawieniach gry („Skasuj postęp” — ustawienia zostają), a wszystkie te dane — odinstalowując grę albo czyszcząc jej dane w ustawieniach Androida.</p>
+<p>Zapis nie zawiera imienia, adresu e-mail ani innych danych, które pozwalałyby Cię zidentyfikować. Leży w katalogu, który Android przydziela grze, i nie trafia na żaden serwer — nie prowadzimy serwerów ani kont graczy.</p>
+<p>Gra odczytuje język systemu — wyłącznie po to, żeby wybrać język gry.</p>
+<p>Jeśli w telefonie włączona jest kopia zapasowa Androida, system może dołączyć zapis gry do kopii na Twoim koncie Google. To funkcja systemu; nie mamy do tej kopii dostępu.</p>
+
+<h2>3. Reklamy (Google AdMob)</h2>
+<p>Gra może wyświetlać reklamy pełnoekranowe między poziomami oraz reklamy z nagrodą, które oglądasz wyłącznie z własnego wyboru. Reklamy dostarcza Google w ramach usługi AdMob.</p>
+<p>Biblioteka Google Mobile Ads SDK automatycznie zbiera i przekazuje Google:</p>
+<ul>
+  <li>adres IP urządzenia, który może posłużyć do określenia przybliżonej lokalizacji,</li>
+  <li>informacje o korzystaniu z aplikacji i reklam, np. uruchomienie aplikacji, dotknięcia, obejrzenia wideo,</li>
+  <li>dane diagnostyczne, np. czas uruchamiania oraz wydajność aplikacji i biblioteki,</li>
+  <li>identyfikatory urządzenia: identyfikator wyświetlania reklam Androida (advertising ID), identyfikator zestawu aplikacji (app set ID) i ewentualnie inne identyfikatory związane z kontami zalogowanymi na urządzeniu.</li>
+</ul>
+<p>Cele: wyświetlanie reklam i pomiar ich skuteczności, analityka, zapobieganie oszustwom i nadużyciom, bezpieczeństwo. Dane są szyfrowane podczas przesyłania (TLS). Google przetwarza je zgodnie ze swoją <a href="https://policies.google.com/privacy">Polityką prywatności</a> i opisem <a href="https://policies.google.com/technologies/partner-sites">Jak Google wykorzystuje informacje z witryn i aplikacji, które korzystają z jego usług</a>; Google może przetwarzać je także poza Europejskim Obszarem Gospodarczym, m.in. w USA; takie przekazanie Google opiera na standardowych klauzulach umownych zatwierdzonych przez Komisję Europejską i na decyzjach Komisji stwierdzających odpowiedni stopień ochrony, w tym na EU-U.S. Data Privacy Framework (<a href="https://policies.google.com/privacy/frameworks">ramy przekazywania danych Google</a>). Jak długo Google przechowuje dane, opisuje <a href="https://policies.google.com/technologies/retention">zasada przechowywania danych Google</a>.</p>
+<p>My, jako wydawca, nie otrzymujemy tych danych w postaci, która pozwalałaby Cię zidentyfikować — w panelu AdMob widzimy wyłącznie zbiorcze statystyki, np. liczbę wyświetleń reklam.</p>
+<p><strong>Podstawa prawna:</strong> reklamy spersonalizowane — Twoja zgoda (art. 6 ust. 1 lit. a RODO); reklamy niespersonalizowane i zapobieganie nadużyciom — nasz prawnie uzasadniony interes, czyli finansowanie bezpłatnej gry i ochrona przed oszustwami (art. 6 ust. 1 lit. f RODO).</p>
+
+<h2>4. Zgoda na reklamy (EOG, Wielka Brytania, Szwajcaria)</h2>
+<p>Przy pierwszym uruchomieniu gra może wyświetlić formularz zgody Google (User Messaging Platform). Reklamy spersonalizowane pojawiają się tylko po wyrażeniu zgody. Bez zgody Google może wyświetlać reklamy niespersonalizowane lub ograniczone, które nadal wymagają przetwarzania części danych, np. w celu zapobiegania oszustwom. Decyzję zmienisz w każdej chwili: Ustawienia gry → „Prywatność reklam”.</p>
+<p>Formularz zapisuje Twoją decyzję na urządzeniu (w standardzie IAB TCF), żeby nie pytać przy każdym uruchomieniu. Zapis zostaje do zmiany decyzji, wyczyszczenia danych aplikacji w ustawieniach Androida albo odinstalowania gry; „Skasuj postęp” go nie usuwa.</p>
+
+<h2>5. Identyfikator reklamowy</h2>
+<p>Identyfikator wyświetlania reklam możesz zresetować albo usunąć w ustawieniach Androida (zwykle Ustawienia → Prywatność → Reklamy albo Ustawienia → Google → Reklamy). Po usunięciu reklamy nie są personalizowane na jego podstawie.</p>
+
+<h2>6. Dzieci</h2>
+<p>Gra jest przeznaczona dla osób w wieku od 13 lat. Nie zbieramy świadomie danych dzieci poniżej 13 roku życia. Jeśli uważasz, że dziecko korzysta z gry wbrew temu, napisz do nas.</p>
+
+<h2>7. Twoje prawa</h2>
+<p>Na podstawie RODO masz prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania i przenoszenia, prawo sprzeciwu oraz prawo cofnięcia zgody w dowolnej chwili (bez wpływu na zgodność z prawem przetwarzania przed jej cofnięciem). Sami nie przechowujemy Twoich danych poza Twoim urządzeniem, więc w sprawie danych zebranych na potrzeby reklam możesz zwrócić się także bezpośrednio do Google. Masz prawo wnieść skargę do organu nadzorczego — w Polsce do Prezesa Urzędu Ochrony Danych Osobowych (<a href="https://uodo.gov.pl">uodo.gov.pl</a>). W razie pytań: <a href="mailto:bobbydevstudio@gmail.com">bobbydevstudio@gmail.com</a>.</p>
+
+<h2>8. Zmiany</h2>
+<p>Jeśli polityka się zmieni (np. po dodaniu zakupów w aplikacji), nowa wersja pojawi się na tej stronie ze zmienioną datą.</p>
+</section>
+
+<section id="en" lang="en">
+<h1>Privacy Policy for Alchemist: Potion Sort Puzzle</h1>
+<p class="meta">Effective date: 15 October 2026</p>
+<ul class="meta">
+  <li>App: Alchemist: Potion Sort Puzzle, Android, package <code>com.bobbydevstudio.alchemist</code></li>
+  <li>Publisher and data controller: Daniel Radkowski (Bobby Dev Studio)</li>
+  <li>Contact: <a href="mailto:bobbydevstudio@gmail.com">bobbydevstudio@gmail.com</a></li>
+</ul>
+
+<h2>1. Summary</h2>
+<ul>
+  <li>The game requires no account and never asks for your name, email address, phone number, contacts, photos or GPS location.</li>
+  <li>Your game progress is stored only on your device. We do not send it to any server.</li>
+  <li>The game shows Google AdMob ads. The data needed for ads is collected by Google's library (Google Mobile Ads SDK) — see section 3.</li>
+  <li>In the European Economic Area, the United Kingdom and Switzerland, personalised ads are shown only with your consent, which you can change at any time in the game.</li>
+</ul>
+
+<h2>2. Data stored on your device</h2>
+<p>The game stores on your phone: your progress (levels, stars, coins, ingredients, recipes and elixirs), your settings (sound, vibration, animations, language, appearance) and the counters needed for the ad rules (e.g. levels since the last ad and its time). This data never leaves your device and we have no access to it. You can delete your progress in the game's Settings (“Reset progress” — your settings are kept), and all of this data by uninstalling the game or clearing its data in Android settings.</p>
+<p>The save contains no name, email address or other data that could identify you. It is kept in the folder Android assigns to the game and is never sent to any server — we run no servers and no player accounts.</p>
+<p>The game reads the system language — only to choose the game's language.</p>
+<p>If Android backup is turned on, the system may include the game's save in the backup on your Google account. This is a system feature; we have no access to that backup.</p>
+
+<h2>3. Ads (Google AdMob)</h2>
+<p>The game may show full-screen ads between levels and rewarded ads that you watch only by your own choice. Ads are provided by Google through its AdMob service.</p>
+<p>The Google Mobile Ads SDK automatically collects and shares with Google:</p>
+<ul>
+  <li>the device's IP address, which may be used to estimate its general location,</li>
+  <li>information about how you use the app and the ads, e.g. app launches, taps and video views,</li>
+  <li>diagnostic information, e.g. launch time and the performance of the app and the SDK,</li>
+  <li>device identifiers: the Android advertising ID, the app set ID and, where applicable, other identifiers related to accounts signed in on the device.</li>
+</ul>
+<p>Purposes: showing ads and measuring their performance, analytics, fraud prevention and security. The data is encrypted in transit (TLS). Google processes it under its <a href="https://policies.google.com/privacy">Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use our services</a>; Google may also process it outside the European Economic Area, including in the United States; Google bases such transfers on standard contractual clauses approved by the European Commission and on the Commission's adequacy decisions, including the EU-U.S. Data Privacy Framework (<a href="https://policies.google.com/privacy/frameworks">Google's data transfer frameworks</a>). How long Google keeps the data is described in <a href="https://policies.google.com/technologies/retention">How Google retains data</a>.</p>
+<p>We, the publisher, do not receive this data in a form that identifies you — the AdMob dashboard shows us only aggregated statistics, such as the number of ad impressions.</p>
+<p><strong>Legal basis:</strong> personalised ads — your consent (Art. 6(1)(a) GDPR); non-personalised ads and fraud prevention — our legitimate interest in funding a free game and protecting it against fraud (Art. 6(1)(f) GDPR).</p>
+
+<h2>4. Ad consent (EEA, UK, Switzerland)</h2>
+<p>On first launch the game may show Google's consent form (User Messaging Platform). Personalised ads are shown only after you consent. Without consent, Google may show non-personalised or limited ads, which still require processing some data, e.g. for fraud prevention. You can change your choice at any time: the game's Settings → “Ad privacy”.</p>
+<p>The form stores your choice on your device (in the IAB TCF standard) so that it does not ask again on every launch. The record stays until you change your choice, clear the app's data in Android settings or uninstall the game; “Reset progress” does not remove it.</p>
+
+<h2>5. Advertising ID</h2>
+<p>You can reset or delete your advertising ID in Android settings (usually Settings → Privacy → Ads, or Settings → Google → Ads). Once it is deleted, ads are no longer personalised based on it.</p>
+
+<h2>6. Children</h2>
+<p>The game is intended for people aged 13 and over. We do not knowingly collect data from children under 13. If you believe a child is using the game contrary to this, please contact us.</p>
+
+<h2>7. Your rights</h2>
+<p>Under the GDPR you have the right to access, rectify and erase your data, to restrict its processing, to data portability, to object, and to withdraw your consent at any time (without affecting the lawfulness of processing before withdrawal). We do not store your data anywhere except on your device, so for data collected for ads you may also contact Google directly. You have the right to lodge a complaint with a supervisory authority — in Poland, the President of the Personal Data Protection Office (<a href="https://uodo.gov.pl">uodo.gov.pl</a>). Questions: <a href="mailto:bobbydevstudio@gmail.com">bobbydevstudio@gmail.com</a>.</p>
+
+<h2>8. Changes</h2>
+<p>If this policy changes (e.g. after in-app purchases are added), the new version will be published on this page with a new date.</p>
+</section>
+</main>
+</body>
+</html>
