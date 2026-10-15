@@ -1,0 +1,3 @@
+# app-ads.txt - Bobby Dev Studio (https://danielradkowski.github.io/)
+# Alchemist: Potion Sort Puzzle, com.bobbydevstudio.alchemist
+google.com, pub-5224562756495700, DIRECT, f08c47fec0942fa0
