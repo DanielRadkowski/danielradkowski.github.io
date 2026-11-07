@@ -9,6 +9,8 @@
   Opublikowane 11.10.2026: kopia w repozytorium danielradkowski.github.io (od 15.10.2026: alchemist/privacy.html).
   Aktualizacja 15.10.2026: identyfikator com.bobbydevstudio.alchemist, uzupełnienia z audytu
   docs/meta/ZGODNOSC-GOOGLE-PLAY.md (pkt 3 i 8).
+  Aktualizacja 20.10.2026: kopia postępu w Block Store (przeżywa odinstalowanie gry) — wgrana na stronę 07.11.2026 razem z następną.
+  Aktualizacja 07.11.2026: statystyki gry PostHog (nowy punkt 4, dalsze +1) — wgrana na stronę 07.11.2026.
 -->
 <html lang="en">
 <head>
@@ -47,7 +49,7 @@
 
 <section id="pl" lang="pl">
 <h1>Polityka prywatności gry Alchemist: Potion Sort Puzzle</h1>
-<p class="meta">Obowiązuje od: 15 października 2026</p>
+<p class="meta">Obowiązuje od: 7 listopada 2026</p>
 <ul class="meta">
   <li>Aplikacja: Alchemist: Potion Sort Puzzle, Android, identyfikator <code>com.bobbydevstudio.alchemist</code></li>
   <li>Wydawca i administrator danych: Daniel Radkowski (Bobby Dev Studio)</li>
@@ -59,14 +61,16 @@
   <li>Gra nie wymaga konta i nie prosi o imię, adres e-mail, numer telefonu, kontakty, zdjęcia ani lokalizację GPS.</li>
   <li>Postęp gry zapisuje się wyłącznie na Twoim urządzeniu. Nie wysyłamy go na żaden serwer.</li>
   <li>Gra wyświetla reklamy Google AdMob. Dane potrzebne do reklam zbiera biblioteka Google (Google Mobile Ads SDK) — szczegóły w punkcie 3.</li>
+  <li>Gra wysyła anonimowe statystyki rozgrywki (PostHog), żeby ulepszać poziomy — bez danych, które pozwalałyby Cię zidentyfikować. Wyłączysz je w Ustawieniach gry — szczegóły w punkcie 4.</li>
   <li>W Europejskim Obszarze Gospodarczym, Wielkiej Brytanii i Szwajcarii reklamy spersonalizowane pojawiają się tylko za Twoją zgodą, którą możesz w każdej chwili zmienić w grze.</li>
 </ul>
 
 <h2>2. Dane zapisywane na urządzeniu</h2>
-<p>Gra zapisuje w pamięci telefonu: postęp (poziomy, gwiazdki, monety, składniki, receptury i eliksiry), ustawienia (dźwięk, wibracje, animacje, język, wygląd) oraz liczniki potrzebne do zasad wyświetlania reklam (np. liczbę poziomów od ostatniej reklamy i jej czas). Te dane nie opuszczają urządzenia i nie mamy do nich dostępu. Postęp usuniesz w Ustawieniach gry („Skasuj postęp” — ustawienia zostają), a wszystkie te dane — odinstalowując grę albo czyszcząc jej dane w ustawieniach Androida.</p>
+<p>Gra zapisuje w pamięci telefonu: postęp (poziomy, gwiazdki, monety, składniki, receptury i eliksiry), ustawienia (dźwięk, wibracje, animacje, język, wygląd, statystyki gry) oraz liczniki potrzebne do zasad wyświetlania reklam (np. liczbę poziomów od ostatniej reklamy i jej czas). Te dane nie opuszczają urządzenia i nie mamy do nich dostępu. Wyjątkiem jest losowy identyfikator instalacji, który gra dołącza do statystyk opisanych w punkcie 4. Postęp usuniesz w Ustawieniach gry („Skasuj postęp” — ustawienia zostają). Ustawienia i liczniki reklam usuwa też odinstalowanie gry albo wyczyszczenie jej danych w ustawieniach Androida; postęp ma dodatkowo kopię opisaną niżej.</p>
 <p>Zapis nie zawiera imienia, adresu e-mail ani innych danych, które pozwalałyby Cię zidentyfikować. Leży w katalogu, który Android przydziela grze, i nie trafia na żaden serwer — nie prowadzimy serwerów ani kont graczy.</p>
 <p>Gra odczytuje język systemu — wyłącznie po to, żeby wybrać język gry.</p>
 <p>Jeśli w telefonie włączona jest kopia zapasowa Androida, system może dołączyć zapis gry do kopii na Twoim koncie Google. To funkcja systemu; nie mamy do tej kopii dostępu.</p>
+<p>Żeby postęp nie przepadł po odinstalowaniu i ponownej instalacji gry, gra trzyma też kopię zapisu postępu w usłudze Block Store z Usług Google Play — na tym samym telefonie, poza katalogiem gry. Kopia nie jest wysyłana do chmury i nie mamy do niej dostępu; Android przechowuje ją, gdy w telefonie włączona jest kopia zapasowa. Po ponownej instalacji gra wczytuje z niej postęp. „Skasuj postęp” zastępuje ją pustym zapisem.</p>
 
 <h2>3. Reklamy (Google AdMob)</h2>
 <p>Gra może wyświetlać reklamy pełnoekranowe między poziomami oraz reklamy z nagrodą, które oglądasz wyłącznie z własnego wyboru. Reklamy dostarcza Google w ramach usługi AdMob.</p>
@@ -81,26 +85,39 @@
 <p>My, jako wydawca, nie otrzymujemy tych danych w postaci, która pozwalałaby Cię zidentyfikować — w panelu AdMob widzimy wyłącznie zbiorcze statystyki, np. liczbę wyświetleń reklam.</p>
 <p><strong>Podstawa prawna:</strong> reklamy spersonalizowane — Twoja zgoda (art. 6 ust. 1 lit. a RODO); reklamy niespersonalizowane i zapobieganie nadużyciom — nasz prawnie uzasadniony interes, czyli finansowanie bezpłatnej gry i ochrona przed oszustwami (art. 6 ust. 1 lit. f RODO).</p>
 
-<h2>4. Zgoda na reklamy (EOG, Wielka Brytania, Szwajcaria)</h2>
+<h2>4. Statystyki gry (PostHog)</h2>
+<p>Żeby wiedzieć, które poziomy są za trudne i co warto w grze poprawić, gra wysyła anonimowe statystyki rozgrywki:</p>
+<ul>
+  <li>uruchomienie gry i długość sesji,</li>
+  <li>rozpoczęcie, ukończenie, powtórzenie i przerwanie poziomu: liczbę ruchów, cofnięć i gwiazdek, czas gry na poziomie, użyte podpowiedzi i dodatkową probówkę,</li>
+  <li>otwierane ekrany gry, uwarzone eliksiry, zakupy w sklepie gry (za monety z gry) oraz to, czy reklama została obejrzana do końca,</li>
+  <li>wersję gry, model telefonu, wersję systemu, rozdzielczość ekranu i język gry.</li>
+</ul>
+<p>Statystyki są przypisane do losowego identyfikatora instalacji, który gra tworzy przy pierwszym uruchomieniu i trzyma na urządzeniu. Nie jest to identyfikator reklamowy ani dane konta, a statystyki nie zawierają imienia, adresu e-mail ani niczego, co wpisujesz — nie pozwalają nam ustalić, kim jesteś. Adres IP, z którego przychodzą, jest anonimizowany i nie jest zapisywany. Identyfikator znika po odinstalowaniu gry albo wyczyszczeniu jej danych w ustawieniach Androida; „Skasuj postęp” go nie zmienia.</p>
+<p>Statystyki przetwarza na nasze zlecenie PostHog Inc. na serwerach w Unii Europejskiej (Frankfurt), na podstawie umowy powierzenia przetwarzania danych. Jeśli PostHog Inc. (firma z siedzibą w USA) ma do nich dostęp spoza Europejskiego Obszaru Gospodarczego, opiera się na standardowych klauzulach umownych zatwierdzonych przez Komisję Europejską. Dane są szyfrowane podczas przesyłania (TLS). Przechowujemy je najwyżej 12 miesięcy, potem są usuwane. Więcej: <a href="https://posthog.com/privacy">Polityka prywatności PostHog</a>.</p>
+<p><strong>Podstawa prawna:</strong> nasz prawnie uzasadniony interes w ulepszaniu gry (art. 6 ust. 1 lit. f RODO).</p>
+<p>Statystyki wyłączysz w każdej chwili: Ustawienia gry → „Statystyki gry”. Gra przestaje wtedy wysyłać cokolwiek i kasuje statystyki, których jeszcze nie wysłała. Gdy telefon nie ma internetu, statystyki czekają na urządzeniu i wychodzą później.</p>
+
+<h2>5. Zgoda na reklamy (EOG, Wielka Brytania, Szwajcaria)</h2>
 <p>Przy pierwszym uruchomieniu gra może wyświetlić formularz zgody Google (User Messaging Platform). Reklamy spersonalizowane pojawiają się tylko po wyrażeniu zgody. Bez zgody Google może wyświetlać reklamy niespersonalizowane lub ograniczone, które nadal wymagają przetwarzania części danych, np. w celu zapobiegania oszustwom. Decyzję zmienisz w każdej chwili: Ustawienia gry → „Prywatność reklam”.</p>
 <p>Formularz zapisuje Twoją decyzję na urządzeniu (w standardzie IAB TCF), żeby nie pytać przy każdym uruchomieniu. Zapis zostaje do zmiany decyzji, wyczyszczenia danych aplikacji w ustawieniach Androida albo odinstalowania gry; „Skasuj postęp” go nie usuwa.</p>
 
-<h2>5. Identyfikator reklamowy</h2>
+<h2>6. Identyfikator reklamowy</h2>
 <p>Identyfikator wyświetlania reklam możesz zresetować albo usunąć w ustawieniach Androida (zwykle Ustawienia → Prywatność → Reklamy albo Ustawienia → Google → Reklamy). Po usunięciu reklamy nie są personalizowane na jego podstawie.</p>
 
-<h2>6. Dzieci</h2>
+<h2>7. Dzieci</h2>
 <p>Gra jest przeznaczona dla osób w wieku od 13 lat. Nie zbieramy świadomie danych dzieci poniżej 13 roku życia. Jeśli uważasz, że dziecko korzysta z gry wbrew temu, napisz do nas.</p>
 
-<h2>7. Twoje prawa</h2>
-<p>Na podstawie RODO masz prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania i przenoszenia, prawo sprzeciwu oraz prawo cofnięcia zgody w dowolnej chwili (bez wpływu na zgodność z prawem przetwarzania przed jej cofnięciem). Sami nie przechowujemy Twoich danych poza Twoim urządzeniem, więc w sprawie danych zebranych na potrzeby reklam możesz zwrócić się także bezpośrednio do Google. Masz prawo wnieść skargę do organu nadzorczego — w Polsce do Prezesa Urzędu Ochrony Danych Osobowych (<a href="https://uodo.gov.pl">uodo.gov.pl</a>). W razie pytań: <a href="mailto:bobbydevstudio@gmail.com">bobbydevstudio@gmail.com</a>.</p>
+<h2>8. Twoje prawa</h2>
+<p>Na podstawie RODO masz prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania i przenoszenia, prawo sprzeciwu oraz prawo cofnięcia zgody w dowolnej chwili (bez wpływu na zgodność z prawem przetwarzania przed jej cofnięciem). Poza anonimowymi statystykami gry (punkt 4) nie przechowujemy Twoich danych poza Twoim urządzeniem; w sprawie danych zebranych na potrzeby reklam możesz zwrócić się także bezpośrednio do Google. Statystyki nie są powiązane z Twoją tożsamością, więc zwykle nie jesteśmy w stanie wskazać, które z nich dotyczą Ciebie (art. 11 RODO); sprzeciw wobec nich zgłosisz najprościej, wyłączając je w Ustawieniach gry. Masz prawo wnieść skargę do organu nadzorczego — w Polsce do Prezesa Urzędu Ochrony Danych Osobowych (<a href="https://uodo.gov.pl">uodo.gov.pl</a>). W razie pytań: <a href="mailto:bobbydevstudio@gmail.com">bobbydevstudio@gmail.com</a>.</p>
 
-<h2>8. Zmiany</h2>
+<h2>9. Zmiany</h2>
 <p>Jeśli polityka się zmieni (np. po dodaniu zakupów w aplikacji), nowa wersja pojawi się na tej stronie ze zmienioną datą.</p>
 </section>
 
 <section id="en" lang="en">
 <h1>Privacy Policy for Alchemist: Potion Sort Puzzle</h1>
-<p class="meta">Effective date: 15 October 2026</p>
+<p class="meta">Effective date: 7 November 2026</p>
 <ul class="meta">
   <li>App: Alchemist: Potion Sort Puzzle, Android, package <code>com.bobbydevstudio.alchemist</code></li>
   <li>Publisher and data controller: Daniel Radkowski (Bobby Dev Studio)</li>
@@ -112,14 +129,16 @@
   <li>The game requires no account and never asks for your name, email address, phone number, contacts, photos or GPS location.</li>
   <li>Your game progress is stored only on your device. We do not send it to any server.</li>
   <li>The game shows Google AdMob ads. The data needed for ads is collected by Google's library (Google Mobile Ads SDK) — see section 3.</li>
+  <li>The game sends anonymous gameplay statistics (PostHog) to improve the levels — without data that could identify you. You can turn them off in the game's Settings — see section 4.</li>
   <li>In the European Economic Area, the United Kingdom and Switzerland, personalised ads are shown only with your consent, which you can change at any time in the game.</li>
 </ul>
 
 <h2>2. Data stored on your device</h2>
-<p>The game stores on your phone: your progress (levels, stars, coins, ingredients, recipes and elixirs), your settings (sound, vibration, animations, language, appearance) and the counters needed for the ad rules (e.g. levels since the last ad and its time). This data never leaves your device and we have no access to it. You can delete your progress in the game's Settings (“Reset progress” — your settings are kept), and all of this data by uninstalling the game or clearing its data in Android settings.</p>
+<p>The game stores on your phone: your progress (levels, stars, coins, ingredients, recipes and elixirs), your settings (sound, vibration, animations, language, appearance, game statistics) and the counters needed for the ad rules (e.g. levels since the last ad and its time). This data never leaves your device and we have no access to it. The one exception is a random installation ID, which the game attaches to the statistics described in section 4. You can delete your progress in the game's Settings (“Reset progress” — your settings are kept). Uninstalling the game or clearing its data in Android settings also deletes the settings and ad counters; your progress has an additional copy, described below.</p>
 <p>The save contains no name, email address or other data that could identify you. It is kept in the folder Android assigns to the game and is never sent to any server — we run no servers and no player accounts.</p>
 <p>The game reads the system language — only to choose the game's language.</p>
 <p>If Android backup is turned on, the system may include the game's save in the backup on your Google account. This is a system feature; we have no access to that backup.</p>
+<p>So that your progress is not lost when you uninstall and reinstall the game, the game also keeps a copy of your progress in Block Store, part of Google Play services — on the same phone, outside the game's folder. The copy is not sent to the cloud and we have no access to it; Android keeps it while backup is turned on on the phone. After a reinstall the game loads your progress from it. “Reset progress” replaces it with an empty save.</p>
 
 <h2>3. Ads (Google AdMob)</h2>
 <p>The game may show full-screen ads between levels and rewarded ads that you watch only by your own choice. Ads are provided by Google through its AdMob service.</p>
@@ -134,20 +153,33 @@
 <p>We, the publisher, do not receive this data in a form that identifies you — the AdMob dashboard shows us only aggregated statistics, such as the number of ad impressions.</p>
 <p><strong>Legal basis:</strong> personalised ads — your consent (Art. 6(1)(a) GDPR); non-personalised ads and fraud prevention — our legitimate interest in funding a free game and protecting it against fraud (Art. 6(1)(f) GDPR).</p>
 
-<h2>4. Ad consent (EEA, UK, Switzerland)</h2>
+<h2>4. Game statistics (PostHog)</h2>
+<p>To learn which levels are too hard and what to improve in the game, the game sends anonymous gameplay statistics:</p>
+<ul>
+  <li>game launches and session length,</li>
+  <li>level starts, completions, restarts and exits: the number of moves, undos and stars, time spent on the level, hints used and the extra tube,</li>
+  <li>game screens opened, elixirs brewed, purchases in the in-game shop (with in-game coins) and whether an ad was watched to the end,</li>
+  <li>game version, phone model, OS version, screen resolution and game language.</li>
+</ul>
+<p>The statistics are tied to a random installation ID that the game creates on first launch and keeps on your device. It is not the advertising ID or any account data, and the statistics contain no name, email address or anything you type — they do not let us identify you. The IP address they come from is anonymised and not stored. The ID is removed when you uninstall the game or clear its data in Android settings; “Reset progress” does not change it.</p>
+<p>The statistics are processed on our behalf by PostHog Inc. on servers in the European Union (Frankfurt), under a data processing agreement. Where PostHog Inc. (a company based in the United States) accesses them from outside the European Economic Area, it relies on standard contractual clauses approved by the European Commission. The data is encrypted in transit (TLS). We keep it for at most 12 months, after which it is deleted. More: <a href="https://posthog.com/privacy">PostHog Privacy Policy</a>.</p>
+<p><strong>Legal basis:</strong> our legitimate interest in improving the game (Art. 6(1)(f) GDPR).</p>
+<p>You can turn statistics off at any time: the game's Settings → “Game statistics”. The game then stops sending anything and deletes statistics it has not sent yet. When the phone is offline, statistics wait on the device and are sent later.</p>
+
+<h2>5. Ad consent (EEA, UK, Switzerland)</h2>
 <p>On first launch the game may show Google's consent form (User Messaging Platform). Personalised ads are shown only after you consent. Without consent, Google may show non-personalised or limited ads, which still require processing some data, e.g. for fraud prevention. You can change your choice at any time: the game's Settings → “Ad privacy”.</p>
 <p>The form stores your choice on your device (in the IAB TCF standard) so that it does not ask again on every launch. The record stays until you change your choice, clear the app's data in Android settings or uninstall the game; “Reset progress” does not remove it.</p>
 
-<h2>5. Advertising ID</h2>
+<h2>6. Advertising ID</h2>
 <p>You can reset or delete your advertising ID in Android settings (usually Settings → Privacy → Ads, or Settings → Google → Ads). Once it is deleted, ads are no longer personalised based on it.</p>
 
-<h2>6. Children</h2>
+<h2>7. Children</h2>
 <p>The game is intended for people aged 13 and over. We do not knowingly collect data from children under 13. If you believe a child is using the game contrary to this, please contact us.</p>
 
-<h2>7. Your rights</h2>
-<p>Under the GDPR you have the right to access, rectify and erase your data, to restrict its processing, to data portability, to object, and to withdraw your consent at any time (without affecting the lawfulness of processing before withdrawal). We do not store your data anywhere except on your device, so for data collected for ads you may also contact Google directly. You have the right to lodge a complaint with a supervisory authority — in Poland, the President of the Personal Data Protection Office (<a href="https://uodo.gov.pl">uodo.gov.pl</a>). Questions: <a href="mailto:bobbydevstudio@gmail.com">bobbydevstudio@gmail.com</a>.</p>
+<h2>8. Your rights</h2>
+<p>Under the GDPR you have the right to access, rectify and erase your data, to restrict its processing, to data portability, to object, and to withdraw your consent at any time (without affecting the lawfulness of processing before withdrawal). Apart from the anonymous game statistics (section 4), we do not store your data anywhere except on your device; for data collected for ads you may also contact Google directly. The statistics are not linked to your identity, so we are usually unable to tell which of them relate to you (Art. 11 GDPR); the simplest way to object to them is to turn them off in the game's Settings. You have the right to lodge a complaint with a supervisory authority — in Poland, the President of the Personal Data Protection Office (<a href="https://uodo.gov.pl">uodo.gov.pl</a>). Questions: <a href="mailto:bobbydevstudio@gmail.com">bobbydevstudio@gmail.com</a>.</p>
 
-<h2>8. Changes</h2>
+<h2>9. Changes</h2>
 <p>If this policy changes (e.g. after in-app purchases are added), the new version will be published on this page with a new date.</p>
 </section>
 </main>
